@@ -17,7 +17,16 @@
 .level,.level[aria-pressed=true],.level:hover:not(:disabled){background:var(--level-surface);color:var(--level-ink);border-color:var(--level-edge)}
 .level small,.level .symbol{color:var(--level-ink)}
 .level[aria-pressed=true]{outline:2px solid #2464aa;outline-offset:3px;box-shadow:0 5px 16px #244d7625}
-</style></head><body>
+
+html.embedded body{--bg:#f3f9f6;--accent:#247465;--line:#d2e5dc;background:transparent}
+html.embedded header,html.embedded footer{display:none}
+html.embedded main{max-width:none;margin:0;padding:0 2px 20px}
+html.embedded .primary{background:#247465;border-color:#247465;color:white}
+html.embedded .primary:hover:not(:disabled){background:#1b5d50}
+html.embedded .tag,html.embedded .status:not(:empty){background:#eaf5f1;color:#247465;border-color:#a2cbbf}
+html.embedded .subactions button[aria-pressed=true],html.embedded .record-tools [aria-pressed=true]{color:#247465}
+html.embedded .level[aria-pressed=true]{outline-color:#247465}
+</style><script>if(new URLSearchParams(location.search).get('embedded')==='1')document.documentElement.classList.add('embedded');</script></head><body>
 <header><div class="brand"><a class="logo" href="./" aria-label="DCG 卡牌首頁">DCG</a><span>蘭中風雲錄</span></div></header>
 <main><div class="intro"><div><div class="eyebrow">DCG CHRONICLES · SINCE 2017</div><h1>江湖夜話</h1><p>一百問，慢慢說。今夜不論輸贏，只聽你的故事。</p></div><span class="tag">完整題庫 · 100 張</span></div>
 <div class="layout"><section aria-label="卡牌等級"><h2 class="label">選一卷，開一段話</h2><div class="levels" id="levels"></div><p class="hint">從暖身開始，或選擇今晚想聊的深度。<br>每級獨立抽牌，同輪不重複。</p></section>
@@ -63,4 +72,15 @@ function reveal(){if(!cards.some(c=>c.level===state.level))return;if(!current())
 function toggle(k){const c=current();if(!c||!state.revealed)return;state[k]=state[k].includes(c.id)?state[k].filter(id=>id!==c.id):[...state[k],c.id];save();render()}
 function renderRecords(){$('records').replaceChildren();const ids=[...state.seen].reverse().filter(id=>!onlyFav||state.favorites.includes(id));if(!ids.length){const p=document.createElement('p');p.textContent=onlyFav?'還沒有收藏的卡牌。':'翻開第一張卡牌，故事就從這裡開始。';$('records').append(p)}ids.forEach(id=>{const c=cards.find(c=>c.id===id),el=document.createElement('div');el.className='record';const meta=document.createElement('small');meta.textContent=levels[c.level].name+' · '+(state.answered.includes(id)?'已聊過':'還沒標記')+(state.favorites.includes(id)?' · ♥ 收藏':'');const b=document.createElement('button');b.textContent='再看';b.onclick=()=>{state.level=c.level;state.cursor=state.history.lastIndexOf(id);state.revealed=true;save();render();$('card').focus();$('card').scrollIntoView({block:'center',behavior:'smooth'})};const p=document.createElement('p');p.textContent=c.text;el.append(meta,b,p);$('records').append(el)})}
 $('card').onclick=reveal;$('next').onclick=draw;$('skip').onclick=()=>draw({skipped:true});$('previous').onclick=()=>{if(state.cursor>0){state.cursor--;const c=current();state.level=c.level;state.revealed=state.seen.includes(c.id);save();render();status('')}};$('favorite').onclick=()=>toggle('favorites');$('answered').onclick=()=>toggle('answered');$('showAll').onclick=()=>{onlyFav=false;$('showAll').setAttribute('aria-pressed','true');$('showFav').setAttribute('aria-pressed','false');renderRecords()};$('showFav').onclick=()=>{onlyFav=true;$('showAll').setAttribute('aria-pressed','false');$('showFav').setAttribute('aria-pressed','true');renderRecords()};$('reset').onclick=()=>$('confirmReset').showModal();$('confirmReset').onclose=()=>{if($('confirmReset').returnValue==='confirm'){state=fresh();save();render();status('遊玩紀錄已清除。')}};$('export').onclick=()=>{const blob=new Blob([JSON.stringify({deck:deck.version,exportedAt:new Date().toISOString(),state},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='dcg-play-records.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};render();save();
-</script></body></html>
+</script>
+<script>
+if(document.documentElement.classList.contains('embedded')){
+ const sendHeight=()=>parent.postMessage({type:'dcg-night-height',height:Math.ceil(document.body.getBoundingClientRect().height)+4},location.origin);
+ if('ResizeObserver' in window)new ResizeObserver(sendHeight).observe(document.body);
+ window.addEventListener('resize',sendHeight);
+ window.addEventListener('message',e=>{if(e.source===parent&&e.origin===location.origin&&e.data?.type==='dcg-night-measure')sendHeight();});
+ window.addEventListener('load',sendHeight);sendHeight();
+}
+</script>
+</body></html>
+
