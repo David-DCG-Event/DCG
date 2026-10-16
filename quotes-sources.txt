@@ -1,0 +1,42 @@
+經典一頁 — 語料來源與整理說明
+
+收錄 1000 則：200 則論語、80 則孟子、400 則唐詩摘句、300 則宋詞摘句、20 則西方思想與科學著作／書信譯句。不是 1000 位作者，也非每句都屬廣為流傳的格言。詩詞每篇最多選兩句完整句子；每則保留作者、作品與來源網址。簡體資料轉為繁體，外文中文為本站譯寫，原文可對照。
+
+古籍資料庫：https://github.com/chinese-poetry/chinese-poetry
+
+資料庫授權：
+The MIT License (MIT)
+
+Copyright (c) 2016 JackeyGao
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+西方文本來源：
+勒內·笛卡爾｜方法論｜https://www.gutenberg.org/files/59/59-h/59-h.htm
+法蘭西斯·培根｜新工具 第一卷 第三則｜https://www.gutenberg.org/files/45988/45988-h/45988-h.htm
+約翰·史都華·彌爾｜論自由｜https://www.gutenberg.org/files/34901/34901-h/34901-h.htm
+愛比克泰德｜手冊｜https://www.gutenberg.org/files/10661/10661-h/10661-h.htm
+蘇格拉底（柏拉圖記述）｜申辯篇 38a｜https://www.gutenberg.org/files/1656/1656-h/1656-h.htm
+伊曼努爾·康德｜回答這個問題：什麼是啟蒙？｜https://www.gutenberg.org/ebooks/30821
+艾薩克·牛頓｜1676 年致虎克書信｜https://newtonproject.ox.ac.uk/view/texts/normalized/OTHE00101
+查爾斯·達爾文｜物種起源 結語｜https://www.gutenberg.org/files/1228/1228-h/1228-h.htm
+亞里斯多德｜形上學 第一卷 980a｜https://en.wikisource.org/wiki/Page:Metaphysics_by_Aristotle_Ross_1908_(deannotated).djvu/21
+拉爾夫·沃爾多·愛默生｜論自立｜https://www.gutenberg.org/cache/epub/16643/pg16643-images.html
+班傑明·富蘭克林｜致富之道｜https://www.gutenberg.org/files/40236/40236-h/40236-h.htm
