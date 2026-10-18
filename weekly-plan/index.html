@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0f">
+<title>我的一週計畫｜學習 × 生活</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0b0f;--panel:#17171c;--panel2:#202028;--line:#35343c;--txt:#f4f1eb;--sub:#aaa7ae;--gold:#d7b77a;--robot:#6faaf3;--sim:#65c8ad;--psych:#b69bea;--gpt:#e9ba75;--class:#e78c81}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 0%,#302820 0,transparent 30%),var(--bg);color:var(--txt);font-family:system-ui,"Microsoft JhengHei","Noto Sans TC",sans-serif;line-height:1.6}
+a{color:var(--gold)}button,input{font:inherit}button{cursor:pointer;color:var(--txt);background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 14px}button:hover{border-color:var(--gold)}button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1150px;margin:auto;padding:28px 18px 70px}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:32px}.eyebrow{letter-spacing:3px;color:var(--gold);font-size:12px}.back{font-size:13px;text-decoration:none;color:var(--sub)}
+h1{font-size:clamp(32px,5vw,54px);font-family:serif;letter-spacing:3px;font-weight:500;margin:7px 0}h2{font-size:20px;font-weight:600;margin:0 0 6px}.lede{color:var(--sub);margin:0;max-width:720px}.hero{margin:22px 0 28px}.pill{display:inline-block;border:1px solid #8c7653;color:var(--gold);border-radius:99px;padding:4px 12px;font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}.stat,.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px}.stat{padding:18px}.stat b{font-size:31px;font-variant-numeric:tabular-nums}.stat span{display:block;color:var(--sub);font-size:13px}
+.main{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,0.9fr);gap:18px}.panel{padding:21px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.tiny{font-size:12px;color:var(--sub)}.tabs{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin:20px 0}.tab{padding:10px 2px;border-radius:9px}.tab[aria-selected=true]{color:#21180c;background:var(--gold);border-color:var(--gold);font-weight:700}
+.timeline{display:grid;gap:9px}.slot{display:grid;grid-template-columns:108px 1fr;gap:8px;align-items:stretch}.time{font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums;display:flex;align-items:center}.activity{padding:11px 13px 11px 16px;background:var(--panel2);border-radius:9px;border-left:4px solid var(--type,#7e7e89);font-weight:550;font-size:14px}.activity small{display:block;font-size:11px;color:var(--sub);font-weight:400}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:19px}.legend span{font-size:11px;color:var(--sub)}.dot{display:inline-block;width:9px;height:9px;border-radius:100%;margin-right:5px}
+.task{display:flex;gap:13px;align-items:center;border-bottom:1px solid var(--line);padding:14px 0}.task:last-child{border:0}.task input{width:21px;height:21px;accent-color:var(--gold);cursor:pointer}.task label{cursor:pointer;flex:1}.task label strong{display:block}.task label small{color:var(--sub)}.task input:checked+label strong{text-decoration:line-through;color:var(--sub)}
+.progress{height:11px;background:#33313a;border-radius:20px;overflow:hidden;margin:15px 0 5px}.progress>div{height:100%;background:linear-gradient(90deg,#7caed5,#d6bc83);width:0;transition:width .2s}
+.week-table{overflow-x:auto}.matrix{border-collapse:collapse;width:100%;min-width:470px;margin-top:12px;font-size:13px}.matrix th,.matrix td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:center}.matrix th:first-child,.matrix td:first-child{text-align:left}.matrix th{color:var(--sub);font-weight:500}.matrix input{width:18px;height:18px;accent-color:var(--gold);cursor:pointer}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.accent{background:var(--gold);color:#23190d;border-color:var(--gold);font-weight:700}.muted{color:var(--sub)}.notes{margin-top:18px;color:var(--sub);font-size:13px}.insight{margin-top:20px}.insight p{color:var(--sub);font-size:14px;margin:5px 0}.footer{font-size:12px;color:var(--sub);text-align:center;margin-top:38px}
+@media(max-width:760px){.main{grid-template-columns:1fr}.top{align-items:flex-start}.stats{gap:7px}.stat{padding:12px}.stat b{font-size:24px}.panel{padding:16px}.slot{grid-template-columns:94px 1fr}.activity{font-size:13px}.wrap{padding:18px 12px 45px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top"><div><div class="eyebrow">WEEKLY ROUTINE · PERSONAL GROWTH</div><h1>我的一週計畫</h1><p class="lede">把清醒的早晨留給困難的事，把夜晚留給自己。每天四小時學習，其他時間安心生活。</p></div><a class="back" href="../">← 回到 DCG 首頁</a></header>
+<div class="pill">早晨高專注 · 下午閱讀 · 晚上反思</div>
+<section class="stats" aria-label="學習摘要"><div class="stat"><b>4</b><span>每天自主學習小時</span></div><div class="stat"><b>28</b><span>每週學習目標小時</span></div><div class="stat"><b id="doneCount">0 / 28</b><span>本週已完成項目</span></div></section>
+<div class="main">
+<section class="panel">
+<div class="section-head"><div><h2>每日時間軸</h2><div class="tiny" id="courseLine"></div></div><button type="button" id="todayBtn">跳到今天</button></div>
+<div class="tabs" id="dayTabs" role="tablist" aria-label="切換星期"></div>
+<div id="timeline" class="timeline"></div>
+<div class="legend"><span><i class="dot" style="background:var(--class)"></i>上課</span><span><i class="dot" style="background:var(--robot)"></i>機器人學</span><span><i class="dot" style="background:var(--sim)"></i>模擬</span><span><i class="dot" style="background:var(--psych)"></i>心理學</span><span><i class="dot" style="background:var(--gpt)"></i>自我覺察</span></div>
+<p class="notes">週三上午已改成自由時間，安排機器人學及 CoppeliaSim。上課日的專業學習會移到下午；週四早上優先完成高難度任務。</p>
+</section>
+<div>
+<section class="panel"><div class="section-head"><div><h2 id="taskTitle">每日任務</h2><div class="tiny">完成就打勾，進度自動儲存在這台裝置</div></div></div><div id="dailyTasks"></div><div class="progress" role="progressbar" aria-label="本週學習完成進度" aria-valuemin="0" aria-valuemax="28" aria-valuenow="0" id="progressBar"><div id="progressFill"></div></div><div class="tiny" id="progressText"></div><div class="actions"><button type="button" id="copyBtn" class="accent">複製本週進度</button><button type="button" id="resetBtn">重設本週</button></div></section>
+<section class="panel insight"><h2>學習安排原則</h2><p>機器人學 → CoppeliaSim：先理解原理，再建模、控制、除錯。</p><p>心理學閱讀 → GPT 對話：先輸入知識，再整理一天的觀察與想法。</p><p>休息也是計畫的一部分。偶爾未完成，不需要隔天加倍補課。</p></section>
+</div></div>
+<section class="panel" style="margin-top:18px"><div class="section-head"><div><h2>一週打卡總覽</h2><div class="tiny">不同星期可獨立勾選；資料保存在瀏覽器 localStorage</div></div></div><div class="week-table"><table class="matrix"><thead><tr><th>星期</th><th>機器人學</th><th>CoppeliaSim</th><th>心理學</th><th>GPT 覺察</th></tr></thead><tbody id="weeklyBody"></tbody></table></div></section>
+<p class="footer">PERSONAL WEEKLY PLAN · 提醒：進度僅存在目前瀏覽器，不會跨裝置同步。</p>
+</main>
+<script>
+(()=>{
+const names=['週一','週二','週三','週四','週五','週六','週日'];
+const definitions=[
+{label:'機器人學',type:'robot',note:'理論與控制，理解核心概念'},
+{label:'CoppeliaSim Edu',type:'sim',note:'實作、建模與 Python 控制'},
+{label:'心理學閱讀',type:'psych',note:'閱讀並記下一個有感的概念'},
+{label:'GPT 自我覺察',type:'gpt',note:'回顧情緒、行為及今日想法'}
+];
+const s=(time,name,type='free',desc='')=>({time,name,type,desc});
+const breakfast=s('08:00–09:00','起床、早餐');
+const night=s('20:30–21:30','GPT 自我覺察','gpt');
+const rest=s('21:30 以後','自由時間、娛樂與休息');
+const fullFree=[
+breakfast,s('09:00–10:00','機器人學','robot'),s('10:10–11:10','CoppeliaSim Edu','sim'),
+s('11:10–14:00','午餐與自由時間'),s('14:00–15:00','心理學閱讀','psych'),
+s('15:00–20:30','自由活動、運動、晚餐'),night,rest];
+const classMorning=(course)=>[
+breakfast,s('09:10–12:00',course,'class'),s('12:00–13:00','午餐'),
+s('13:00–14:00','機器人學','robot'),s('14:10–15:10','CoppeliaSim Edu','sim'),
+s('15:20–16:20','心理學閱讀','psych'),s('16:20–20:30','自由活動、運動、晚餐'),night,rest];
+const schedules=[
+{course:'智慧電網實習 09:10–12:00',slots:classMorning('智慧電網實習')},
+{course:'無課，上午專注學習',slots:fullFree},
+{course:'無課，上午專注學習',slots:fullFree},
+{course:'機器學習 13:30–16:20',slots:[
+breakfast,s('09:00–10:00','機器人學','robot'),s('10:10–11:10','CoppeliaSim Edu','sim'),
+s('11:10–13:20','午餐、自由時間'),s('13:30–16:20','機器學習','class'),
+s('16:30–17:30','心理學閱讀','psych'),s('17:30–20:30','自由活動、晚餐'),night,rest]},
+{course:'機器人導論 09:10–12:00',slots:classMorning('機器人導論')},
+{course:'週末自由安排',slots:fullFree},
+{course:'週末自由安排',slots:fullFree}
+];
+const $=id=>document.getElementById(id);
+const storage='dcg-weekly-plan-v1';
+function mondayKey(){const d=new Date(),day=(d.getDay()+6)%7,m=new Date(d.getFullYear(),d.getMonth(),d.getDate()-day);return [m.getFullYear(),String(m.getMonth()+1).padStart(2,'0'),String(m.getDate()).padStart(2,'0')].join('-')}
+const wk=mondayKey();let state;
+try{const cached=JSON.parse(localStorage.getItem(storage)||'null');state=cached&&cached.week===wk&&Array.isArray(cached.checked)&&cached.checked.length===7?cached.checked.map(row=>Array.isArray(row)?Array.from({length:4},(_,i)=>!!row[i]):[false,false,false,false]):Array.from({length:7},()=>[false,false,false,false])}catch{state=Array.from({length:7},()=>[false,false,false,false])}
+let selected=(new Date().getDay()+6)%7;
+function persist(){try{localStorage.setItem(storage,JSON.stringify({week:wk,checked:state}))}catch{}}
+function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node}
+function toggle(day,j,on){state[day][j]=on;persist();renderTasks();renderWeekly();updateProgress()}
+function renderTabs(){const target=$('dayTabs');target.replaceChildren();names.forEach((n,i)=>{const b=el('button','tab',n.slice(1));b.type='button';b.role='tab';b.setAttribute('aria-selected',String(selected===i));b.addEventListener('click',()=>{selected=i;render()});target.append(b)})}
+function renderTimeline(){const p=schedules[selected];$('courseLine').textContent=names[selected]+' · '+p.course;const target=$('timeline');target.replaceChildren();p.slots.forEach(slot=>{const r=el('div','slot'),t=el('div','time',slot.time),a=el('div','activity',slot.name);a.style.setProperty('--type',slot.type==='class'?'var(--class)':slot.type==='robot'?'var(--robot)':slot.type==='sim'?'var(--sim)':slot.type==='psych'?'var(--psych)':slot.type==='gpt'?'var(--gpt)':'#777784');if(slot.desc)a.append(el('small','',slot.desc));r.append(t,a);target.append(r)})}
+function checkbox(day,j){const c=el('input');c.type='checkbox';c.checked=state[day][j];c.setAttribute('aria-label',names[day]+' '+definitions[j].label);c.addEventListener('change',()=>toggle(day,j,c.checked));return c}
+function renderTasks(){$('taskTitle').textContent=names[selected]+' · 每日打卡';const target=$('dailyTasks');target.replaceChildren();definitions.forEach((task,j)=>{const r=el('div','task'),c=checkbox(selected,j),label=el('label'),strong=el('strong','',task.label);const id='task-'+selected+'-'+j;c.id=id;label.htmlFor=id;label.append(strong,el('small','',task.note));r.append(c,label);target.append(r)})}
+function renderWeekly(){const target=$('weeklyBody');target.replaceChildren();names.forEach((n,i)=>{const tr=el('tr'),th=el('td','',n);tr.append(th);definitions.forEach((_,j)=>{const td=el('td');td.append(checkbox(i,j));tr.append(td)});target.append(tr)})}
+function updateProgress(){const total=state.flat().filter(Boolean).length;$('doneCount').textContent=total+' / 28';$('progressText').textContent='本週已完成 '+total+' / 28 小時（'+Math.round(total/28*100)+'%）';$('progressFill').style.width=total/28*100+'%';$('progressBar').setAttribute('aria-valuenow',String(total))}
+function render(){renderTabs();renderTimeline();renderTasks();renderWeekly();updateProgress()}
+$('todayBtn').addEventListener('click',()=>{selected=(new Date().getDay()+6)%7;render()});
+$('copyBtn').addEventListener('click',async()=>{const text='本週學習進度（'+wk+' 起）\n'+names.map((d,i)=>d+'：'+definitions.map((x,j)=>(state[i][j]?'✓ ':'□ ')+x.label).join('、')).join('\n');try{await navigator.clipboard.writeText(text);$('copyBtn').textContent='已複製！';setTimeout(()=>$('copyBtn').textContent='複製本週進度',1700)}catch{window.prompt('請複製以下文字：',text)}});
+$('resetBtn').addEventListener('click',()=>{if(confirm('確定重設本週所有打卡記錄？')){state=Array.from({length:7},()=>[false,false,false,false]);persist();render()}});
+render();
+})();
+</script></body></html>
